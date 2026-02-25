@@ -20,3 +20,44 @@
 .nav-links a:hover {
   color: #7a1f1f;
 }
+.profile-container {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 140px;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+  background: #f3f3f3;
+}
+.profile-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+.logout-btn {
+  width: 100%;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #f3f3f3;
+}

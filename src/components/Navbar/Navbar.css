@@ -61,3 +61,14 @@
 .logout-btn:hover {
   background: #f3f3f3;
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* make sure profile also inline */
+.profile-container {
+  display: flex;
+  align-items: center;
+}

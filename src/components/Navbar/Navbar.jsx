@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
@@ -35,28 +36,40 @@ function Navbar() {
         <a href="#reviews">REVIEWS</a>
       </div>
 
-      <div className="profile-container">
-        <div
-          className="profile-icon"
-          onClick={() => setShowMenu(!showMenu)}
-        >
-          👤
+      {/* RIGHT SIDE (CART + PROFILE) */}
+      <div className="nav-right">
+
+        {/* 🛒 CART ICON */}
+        <FaShoppingCart
+          className="cart-icon"
+          onClick={() => navigate("/cart")}
+        />
+
+        {/* 👤 PROFILE */}
+        <div className="profile-container">
+          <div
+            className="profile-icon"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            👤
+          </div>
+
+          {showMenu && (
+            <div className="profile-dropdown">
+              {!isLoggedIn ? (
+                <>
+                  <Link to="/login">Login</Link>
+                  <Link to="/signup">Sign Up</Link>
+                </>
+              ) : (
+                <button className="logout-btn" onClick={handleLogout}>
+                  Logout
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
-        {showMenu && (
-          <div className="profile-dropdown">
-            {!isLoggedIn ? (
-              <>
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Sign Up</Link>
-              </>
-            ) : (
-              <button className="logout-btn" onClick={handleLogout}>
-                Logout
-              </button>
-            )}
-          </div>
-        )}
       </div>
     </nav>
   );

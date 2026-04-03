@@ -1,12 +1,11 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import "./Home.css";
 
 import banarasi from "../assets/images/banarasi.jpeg";
 import cotton from "../assets/images/cotton.jpeg";
 import ikat from "../assets/images/ikat.jpeg";
 import kalamkari from "../assets/images/kalamkari.jpeg";
-import kurtis from "../assets/images/kurtis.jpeg";
-import accessories from "../assets/images/accessories.jpeg";
-import homeImg from "../assets/images/home.jpeg";
-import mens from "../assets/images/mens.jpeg";
 
 import goldenthreads from "../assets/images/goldenthreads.webp";
 import mangalagirikurti from "../assets/images/mangalagirikurti.jpg";
@@ -28,24 +27,74 @@ const products = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [showFilter, setShowFilter] = useState(false);
+
+
   return (
     <>
-      {/* FEATURED */}
+      {/* REGION BASED SECTION */}
       <section className="featured" id="featured">
-        <h2>FEATURED PRODUCTS</h2>
+        <h2>SHOP BY REGION</h2>
+         {/* FILTER BUTTONS */}
+         <div className="top-filter">
+  <button onClick={() => setShowFilter(!showFilter)}>
+    Filter ▾
+  </button>
+
+  {showFilter && (
+    <div className="filter-dropdown">
+  <label className="filter-option">
+    <input
+      type="radio"
+      name="region"
+      onChange={() => {
+        navigate("/region/south");
+        setShowFilter(false);
+      }}
+    />
+    South India
+  </label>
+
+  <label className="filter-option">
+    <input
+      type="radio"
+      name="region"
+      onChange={() => {
+        navigate("/region/north");
+        setShowFilter(false);
+      }}
+    />
+    North India
+  </label>
+</div>
+
+  )}
+</div>
+
+
+
+
+  {/* RIGHT SIDE PRODUCTS */}
+
+
+         
+
+  
 
         <div className="category-grid">
           {[
-            { name: "Banarasi silk saree", image: banarasi },
-            { name: "Pure cotton", image: cotton },
-            { name: "Ikat designer saree", image: ikat },
-            { name: "Kalamkari", image: kalamkari },
-            { name: "Kurtis", image: kurtis },
-            { name: "Accessories", image: accessories },
-            { name: "Home", image: homeImg },
-            { name: "Mens wear", image: mens },
+            { name: "Mangalagiri", image: cotton, region: "mangalagiri" },
+            { name: "Banarasi", image: banarasi, region: "banarasi" },
+            { name: "Pochampally", image: ikat, region: "pochampally" },
+            { name: "Kalamkari", image: kalamkari, region: "kalamkari" },
           ].map((item) => (
-            <div className="category-card" key={item.name}>
+            <div
+              key={item.name}
+              className="category-card"
+              onClick={() => navigate(`/region/${item.region}`)}
+              style={{ cursor: "pointer" }}
+            >
               <img src={item.image} alt={item.name} />
               <p>{item.name}</p>
             </div>
@@ -70,11 +119,7 @@ const Home = () => {
         <div className="product-grid">
           {products.map((item, index) => (
             <div key={index} className="product-card">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="product-img"
-              />
+              <img src={item.image} alt={item.name} className="product-img" />
               <h4>{item.name}</h4>
               <p className="price">From {item.price}</p>
               <button>Add to Cart</button>

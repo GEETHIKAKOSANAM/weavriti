@@ -1,0 +1,38 @@
+.featured {
+  position: relative;
+}
+
+.top-filter {
+  position: absolute;
+  right: 40px;
+  top: 60px;
+}
+
+.top-filter button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background-color: #f5f5dc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.filter-dropdown {
+  margin-top: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.filter-option input {
+  cursor: pointer;
+}

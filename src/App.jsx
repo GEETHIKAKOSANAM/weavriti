@@ -9,11 +9,15 @@ import BuyerPage from "./pages/BuyerPage";
 import SellerPage from "./pages/SellerPage";
 import AdminPage from "./pages/AdminPage";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Language from "./pages/Language";
+
+
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
+      <Route path="/language" element={<Language />} />
 
       <Route
         path="/home"

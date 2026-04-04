@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Home.css";
 
 import banarasi from "../assets/images/banarasi.jpeg";
@@ -29,13 +30,14 @@ const products = [
 const Home = () => {
   const navigate = useNavigate();
   const [showFilter, setShowFilter] = useState(false);
+  const { t } = useTranslation();
 
 
   return (
     <>
       {/* REGION BASED SECTION */}
       <section className="featured" id="featured">
-        <h2>SHOP BY REGION</h2>
+        <h2>{t("shop")}</h2>
          {/* FILTER BUTTONS */}
          <div className="top-filter">
   <button onClick={() => setShowFilter(!showFilter)}>

@@ -28,7 +28,7 @@ function Login() {
       navigate("/seller");
     } 
     else {
-      navigate("/home");
+      navigate("/language");
     }
   };
 

@@ -10,6 +10,8 @@ import SellerPage from "./pages/SellerPage";
 import AdminPage from "./pages/AdminPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Language from "./pages/Language";
+import RegionPage from "./pages/RegionPage";
+import FabricPage from "./pages/FabricPage";
 
 
 
@@ -18,6 +20,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Splash />} />
       <Route path="/language" element={<Language />} />
+      <Route path="/region/:region" element={<RegionPage />} />
+      <Route path="/fabric/:fabricName" element={<FabricPage />} />
 
       <Route
         path="/home"

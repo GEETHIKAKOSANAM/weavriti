@@ -32,64 +32,54 @@ const Home = () => {
   const [showFilter, setShowFilter] = useState(false);
   const { t } = useTranslation();
 
-
   return (
     <>
       {/* REGION BASED SECTION */}
       <section className="featured" id="featured">
         <h2>{t("shop")}</h2>
-         {/* FILTER BUTTONS */}
-         <div className="top-filter">
-  <button onClick={() => setShowFilter(!showFilter)}>
-    Filter ▾
-  </button>
 
-  {showFilter && (
-    <div className="filter-dropdown">
-  <label className="filter-option">
-    <input
-      type="radio"
-      name="region"
-      onChange={() => {
-        navigate("/region/south");
-        setShowFilter(false);
-      }}
-    />
-    South India
-  </label>
+        {/* FILTER BUTTON */}
+        <div className="top-filter">
+          <button onClick={() => setShowFilter(!showFilter)}>
+            {t("filter")} ▾
+          </button>
 
-  <label className="filter-option">
-    <input
-      type="radio"
-      name="region"
-      onChange={() => {
-        navigate("/region/north");
-        setShowFilter(false);
-      }}
-    />
-    North India
-  </label>
-</div>
+          {showFilter && (
+            <div className="filter-dropdown">
+              <label className="filter-option">
+                <input
+                  type="radio"
+                  name="region"
+                  onChange={() => {
+                    navigate("/region/south");
+                    setShowFilter(false);
+                  }}
+                />
+                {t("south")}
+              </label>
 
-  )}
-</div>
+              <label className="filter-option">
+                <input
+                  type="radio"
+                  name="region"
+                  onChange={() => {
+                    navigate("/region/north");
+                    setShowFilter(false);
+                  }}
+                />
+                {t("north")}
+              </label>
+            </div>
+          )}
+        </div>
 
-
-
-
-  {/* RIGHT SIDE PRODUCTS */}
-
-
-         
-
-  
-
+        {/* CATEGORY GRID */}
         <div className="category-grid">
           {[
-            { name: "Mangalagiri", image: cotton, region: "mangalagiri" },
-            { name: "Banarasi", image: banarasi, region: "banarasi" },
-            { name: "Pochampally", image: ikat, region: "pochampally" },
-            { name: "Kalamkari", image: kalamkari, region: "kalamkari" },
+            { name: "mangalagiri", image: cotton, region: "mangalagiri" },
+            { name: "banarasiSilk", image: banarasi, region: "banarasi" },
+            { name: "pochampallyIkat", image: ikat, region: "pochampally" },
+            { name: "kalamkari", image: kalamkari, region: "kalamkari" },
           ].map((item) => (
             <div
               key={item.name}
@@ -97,8 +87,8 @@ const Home = () => {
               onClick={() => navigate(`/region/${item.region}`)}
               style={{ cursor: "pointer" }}
             >
-              <img src={item.image} alt={item.name} />
-              <p>{item.name}</p>
+              <img src={item.image} alt={t(item.name)} />
+              <p>{t(item.name)}</p>
             </div>
           ))}
         </div>
@@ -107,7 +97,7 @@ const Home = () => {
       {/* SUPPORT */}
       <section className="support-section">
         <div className="support-left">
-          <h3>Supporting 900+ artisans across India</h3>
+          <h3>{t("support")}</h3>
         </div>
         <div className="support-right">
           <img src={india} alt="India Map" className="map-circle" />
@@ -116,15 +106,17 @@ const Home = () => {
 
       {/* JUST LAUNCHED */}
       <section id="launch" className="section">
-        <h2 className="section-title">JUST LAUNCHED</h2>
+        <h2 className="section-title">{t("launch")}</h2>
 
         <div className="product-grid">
           {products.map((item, index) => (
             <div key={index} className="product-card">
               <img src={item.image} alt={item.name} className="product-img" />
               <h4>{item.name}</h4>
-              <p className="price">From {item.price}</p>
-              <button>Add to Cart</button>
+              <p className="price">
+                {t("from")} {item.price}
+              </p>
+              <button>{t("cart")}</button>
             </div>
           ))}
         </div>
@@ -132,7 +124,7 @@ const Home = () => {
 
       {/* ARTISANS */}
       <section id="artisans" className="section">
-        <h2 className="section-title">MEET THE ARTISANS</h2>
+        <h2 className="section-title">{t("artisans")}</h2>
 
         <div className="artisan-grid">
           <div className="artisan-card">
@@ -146,22 +138,22 @@ const Home = () => {
           </div>
         </div>
 
-        <button className="more-btn">More</button>
+        <button className="more-btn">{t("more")}</button>
       </section>
 
       {/* REVIEWS */}
       <section id="reviews" className="section">
-        <h2 className="section-title">WHAT OUR CUSTOMERS SAY</h2>
+        <h2 className="section-title">{t("reviews")}</h2>
 
         <div className="review-grid">
           <div className="review-card">
-            <p>Love the quality and fit. Highly recommended</p>
-            <span>Priya · Hyderabad · 2 weeks ago</span>
+            <p>{t("review1")}</p>
+            <span>{t("review1by")}</span>
           </div>
 
           <div className="review-card">
-            <p>Great collection but a bit not satisfied.</p>
-            <span>Sneha · Vijayawada · 4 weeks ago</span>
+            <p>{t("review2")}</p>
+            <span>{t("review2by")}</span>
           </div>
         </div>
       </section>

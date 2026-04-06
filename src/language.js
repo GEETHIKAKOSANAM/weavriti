@@ -5,42 +5,173 @@ const resources = {
   en: {
     translation: {
       shop: "Shop by Region",
+      categories: "Categories",
+      artisans: "Artisans",
+      reviews: "Reviews",
+      login: "Login",
+      signup: "Sign Up",
+      logout: "Logout",
+      filter: "Filter",
+      south: "South India",
+      north: "North India",
+
+      southIndiaFabrics: "South India Fabrics",
+      northIndiaFabrics: "North India Fabrics",
+
+      andhraPradesh: "Andhra Pradesh",
+      tamilNadu: "Tamil Nadu",
+      karnataka: "Karnataka",
+      kerala: "Kerala",
+      telangana: "Telangana",
+      uttarPradesh: "Uttar Pradesh",
+      rajasthan: "Rajasthan",
+      punjab: "Punjab",
+      madhyaPradesh: "Madhya Pradesh",
+      kashmir: "Kashmir",
+
+      mangalagiri: "Mangalagiri",
+      pochampallyIkat: "Pochampally Ikat",
+      kalamkari: "Kalamkari",
+      kanchipuramSilk: "Kanchipuram Silk",
+      chettinadCotton: "Chettinad Cotton",
+      mysoreSilk: "Mysore Silk",
+      ilkalSaree: "Ilkal Saree",
+      kasavuSaree: "Kasavu Saree",
+      gadwalSaree: "Gadwal Saree",
+      banarasiSilk: "Banarasi Silk",
+      bandhani: "Bandhani",
+      leheriya: "Leheriya",
+      phulkari: "Phulkari",
+      chanderi: "Chanderi",
+      maheshwari: "Maheshwari",
+      pashminaWool: "Pashmina Wool",
     },
   },
+
   te: {
-  translation: {
-    shop: "ప్రాంతం ప్రకారం కొనండి",
+    translation: {
+      shop: "ప్రాంతం ప్రకారం కొనండి",
+      categories: "వర్గాలు",
+      artisans: "కార్మికులు",
+      reviews: "సమీక్షలు",
+      login: "లాగిన్",
+      signup: "సైన్ అప్",
+      logout: "లాగౌట్",
+      filter: "ఫిల్టర్",
+      south: "దక్షిణ భారతదేశం",
+      north: "ఉత్తర భారతదేశం",
+
+      southIndiaFabrics: "దక్షిణ భారత వస్త్రాలు",
+      northIndiaFabrics: "ఉత్తర భారత వస్త్రాలు",
+
+      andhraPradesh: "ఆంధ్రప్రదేశ్",
+      tamilNadu: "తమిళనాడు",
+      karnataka: "కర్ణాటక",
+      kerala: "కేరళ",
+      telangana: "తెలంగాణ",
+      uttarPradesh: "ఉత్తరప్రదేశ్",
+      rajasthan: "రాజస్థాన్",
+      punjab: "పంజాబ్",
+      madhyaPradesh: "మధ్యప్రదేశ్",
+      kashmir: "కాశ్మీర్",
+
+      mangalagiri: "మంగళగిరి",
+      pochampallyIkat: "పోచంపల్లి ఇక్కత్",
+      kalamkari: "కలంకారి",
+      kanchipuramSilk: "కాంచీపురం సిల్క్",
+      chettinadCotton: "చెట్టినాడ్ కాటన్",
+      mysoreSilk: "మైసూర్ సిల్క్",
+      ilkalSaree: "ఇల్కల్ చీర",
+      kasavuSaree: "కసావు చీర",
+      gadwalSaree: "గద్వాల్ చీర",
+      banarasiSilk: "బనారసీ సిల్క్",
+      bandhani: "బంధనీ",
+      leheriya: "లెహేరియా",
+      phulkari: "ఫుల్కారి",
+      chanderi: "చందేరి",
+      maheshwari: "మహేశ్వరి",
+      pashminaWool: "పష్మీనా వూల్",
+    },
   },
-},
-hi: {
+
+  hi: {
     translation: {
       shop: "क्षेत्र के अनुसार खरीदें",
+      categories: "श्रेणियाँ",
+      artisans: "कारीगर",
+      reviews: "समीक्षाएं",
+      login: "लॉगिन",
+      signup: "साइन अप",
+      logout: "लॉगआउट",
       filter: "फ़िल्टर",
       south: "दक्षिण भारत",
       north: "उत्तर भारत",
+
+      southIndiaFabrics: "दक्षिण भारत के वस्त्र",
+      northIndiaFabrics: "उत्तर भारत के वस्त्र",
+
+      andhraPradesh: "आंध्र प्रदेश",
+      tamilNadu: "तमिलनाडु",
+      karnataka: "कर्नाटक",
+      kerala: "केरल",
+      telangana: "तेलंगाना",
+
+      mangalagiri: "मंगलागिरि",
+      banarasiSilk: "बनारसी सिल्क",
+      pochampallyIkat: "पोचमपल्ली इकट",
+      kalamkari: "कलमकारी",
+      kanchipuramSilk: "कांचीपुरम सिल्क",
+      chettinadCotton: "चेट्टिनाड कॉटन",
+      mysoreSilk: "मैसूर सिल्क",
+      ilkalSaree: "इलकल साड़ी",
+      kasavuSaree: "कसावु साड़ी",
+      gadwalSaree: "गडवाल साड़ी",
     },
   },
+
   ta: {
     translation: {
       shop: "பகுதி அடிப்படையில் வாங்குங்கள்",
+      categories: "வகைகள்",
+      artisans: "கலைஞர்கள்",
+      reviews: "மதிப்புரைகள்",
+      login: "உள்நுழை",
+      signup: "பதிவு செய்",
+      logout: "வெளியேறு",
       filter: "வடிகட்டி",
       south: "தென் இந்தியா",
       north: "வட இந்தியா",
+      southIndiaFabrics: "தென் இந்திய துணிகள்",
+      northIndiaFabrics: "வட இந்திய துணிகள்",
     },
   },
 
   kn: {
     translation: {
       shop: "ಪ್ರದೇಶದ ಆಧಾರದ ಮೇಲೆ ಖರೀದಿಸಿ",
+      categories: "ವರ್ಗಗಳು",
+      artisans: "ಕಾರಿಗರು",
+      reviews: "ವಿಮರ್ಶೆಗಳು",
+      login: "ಲಾಗಿನ್",
+      signup: "ಸೈನ್ ಅಪ್",
+      logout: "ಲಾಗ್ ಔಟ್",
       filter: "ಫಿಲ್ಟರ್",
       south: "ದಕ್ಷಿಣ ಭಾರತ",
       north: "ಉತ್ತರ ಭಾರತ",
+      southIndiaFabrics: "ದಕ್ಷಿಣ ಭಾರತದ ವಸ್ತ್ರಗಳು",
+      northIndiaFabrics: "ಉತ್ತರ ಭಾರತದ ವಸ್ತ್ರಗಳು",
     },
   },
 
   ml: {
     translation: {
       shop: "പ്രദേശത്തിന്റെ അടിസ്ഥാനത്തിൽ വാങ്ങുക",
+      categories: "വിഭാഗങ്ങൾ",
+      artisans: "കലാകാരന്മാർ",
+      reviews: "അഭിപ്രായങ്ങൾ",
+      login: "ലോഗിൻ",
+      signup: "സൈൻ അപ്പ്",
+      logout: "ലോഗൗട്ട്",
       filter: "ഫിൽട്ടർ",
       south: "ദക്ഷിണ ഇന്ത്യ",
       north: "വടക്കേ ഇന്ത്യ",
@@ -50,6 +181,12 @@ hi: {
   bn: {
     translation: {
       shop: "অঞ্চল অনুযায়ী কিনুন",
+      categories: "বিভাগসমূহ",
+      artisans: "কারিগর",
+      reviews: "রিভিউ",
+      login: "লগইন",
+      signup: "সাইন আপ",
+      logout: "লগআউট",
       filter: "ফিল্টার",
       south: "দক্ষিণ ভারত",
       north: "উত্তর ভারত",
@@ -59,6 +196,12 @@ hi: {
   mr: {
     translation: {
       shop: "प्रदेशानुसार खरेदी करा",
+      categories: "वर्ग",
+      artisans: "कारागीर",
+      reviews: "पुनरावलोकने",
+      login: "लॉगिन",
+      signup: "साइन अप",
+      logout: "लॉगआउट",
       filter: "फिल्टर",
       south: "दक्षिण भारत",
       north: "उत्तर भारत",
@@ -68,6 +211,12 @@ hi: {
   gu: {
     translation: {
       shop: "પ્રદેશ અનુસાર ખરીદી કરો",
+      categories: "વર્ગો",
+      artisans: "કારીગરો",
+      reviews: "સમીક્ષાઓ",
+      login: "લોગિન",
+      signup: "સાઇન અપ",
+      logout: "લોગઆઉટ",
       filter: "ફિલ્ટર",
       south: "દક્ષિણ ભારત",
       north: "ઉત્તર ભારત",
@@ -77,6 +226,12 @@ hi: {
   pa: {
     translation: {
       shop: "ਖੇਤਰ ਦੇ ਅਨੁਸਾਰ ਖਰੀਦੋ",
+      categories: "ਸ਼੍ਰੇਣੀਆਂ",
+      artisans: "ਕਾਰੀਗਰ",
+      reviews: "ਸਮੀਖਿਆਵਾਂ",
+      login: "ਲੌਗਇਨ",
+      signup: "ਸਾਈਨ ਅੱਪ",
+      logout: "ਲੌਗਆਉਟ",
       filter: "ਫਿਲਟਰ",
       south: "ਦੱਖਣ ਭਾਰਤ",
       north: "ਉੱਤਰ ਭਾਰਤ",
@@ -84,12 +239,10 @@ hi: {
   },
 };
 
-
-
-
 i18n.use(initReactI18next).init({
   resources,
   lng: localStorage.getItem("lang") || "en",
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },

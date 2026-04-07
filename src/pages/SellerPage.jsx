@@ -1,5 +1,5 @@
 import "./Dashboard.css";
-import saree from "../assets/images/banarasi.jpeg";
+import saree from "../assets/images/handloom_sarees.jpg";
 
 function SellerPage() {
   return (

@@ -16,7 +16,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
-  background-color: #f6f4f2;
+  background-color: white;
   color: #2c2c2c;
   line-height: 1.6;
 }
@@ -263,4 +263,15 @@ button {
   object-fit: cover !important;
   display: block;
 }
-
+:root {
+     /* maroon */
+  --secondary: white; /* beige */
+  --accent: #d4af37;    /* gold */
+}
+body {
+  background-color: var(--secondary);
+}
+.navbar {
+  background-color: var(--primary);
+  color: purple;
+}

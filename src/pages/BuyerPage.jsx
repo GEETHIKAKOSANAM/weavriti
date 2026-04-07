@@ -4,10 +4,10 @@ import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 import "./Dashboard.css";
 
-import banarasi from "../assets/images/banarasi.jpeg";
-import cotton from "../assets/images/cotton.jpeg";
-import ikat from "../assets/images/ikat.jpeg";
-import kalamkari from "../assets/images/kalamkari.jpeg";
+import handloomBags from "../assets/images/handloom_bags.jpg";
+import handloomSarees from "../assets/images/handloom_sarees.jpg";
+import homeDecor from "../assets/images/home_decor.jpg";
+import jewellery from "../assets/images/jewellery.jpg";
 import goldenthreads from "../assets/images/goldenthreads.webp";
 import mangalagirikurti from "../assets/images/mangalagirikurti.jpg";
 import snowbag from "../assets/images/snowbag.jpg";
@@ -18,10 +18,10 @@ const products = [
   { id: 2, name: "Mangalagiri Kurti Set", price: 1899, image: mangalagirikurti, category: "south" },
   { id: 3, name: "Snow Bag", price: 456, image: snowbag, category: "accessories" },
   { id: 4, name: "Pillow Cover", price: 290, image: pillowcover, category: "home" },
-  { id: 5, name: "Banarasi Silk Saree", price: 8500, image: banarasi, category: "north" },
-  { id: 6, name: " Pochampally Ikat", price: 4200, image: ikat, category: "south" },
-  { id: 7, name: "Kalamkari Dress", price: 2800, image: kalamkari, category: "south" },
-  { id: 8, name: "Cotton Saree", price: 1200, image: cotton, category: "south" },
+  { id: 5, name: "Handloom Saree Premium", price: 8500, image: handloomSarees, category: "north" },
+{ id: 6, name: "Golden Threads Design", price: 4200, image: goldenthreads, category: "south" },
+{ id: 7, name: "Home Decor Set", price: 2800, image: homeDecor, category: "south" },
+{ id: 8, name: "Jewellery Set", price: 1200, image: jewellery, category: "south" },
 ];
 
 const BuyerPage = () => {

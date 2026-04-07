@@ -4,10 +4,11 @@ import { useTranslation } from "react-i18next";
 import { useCart } from "../context/CartContext";
 import "./Home.css";
 
-import banarasi from "../assets/images/banarasi.jpeg";
-import cotton from "../assets/images/cotton.jpeg";
-import ikat from "../assets/images/ikat.jpeg";
-import kalamkari from "../assets/images/kalamkari.jpeg";
+import handloomBags from "../assets/images/handloom_bags.jpg";
+import handloomSarees from "../assets/images/handloom_sarees.jpg";
+import homeDecor from "../assets/images/home_decor.jpg";
+import jewellery from "../assets/images/jewellery.jpg";
+
 
 
 import goldenthreads from "../assets/images/goldenthreads.webp";
@@ -41,7 +42,7 @@ const Home = () => {
     <>
       {/* REGION BASED SECTION */}
       <section className="featured" id="featured">
-        <h2>{t("shop")}</h2>
+        <h2>{t("shopByCategory")}</h2>
 
         {/* FILTER BUTTON */}
         <div className="top-filter">
@@ -79,24 +80,26 @@ const Home = () => {
         </div>
 
         {/* CATEGORY GRID */}
-        <div className="category-grid">
-          {[
-            { name: "mangalagiri", image: cotton, region: "mangalagiri" },
-            { name: "banarasiSilk", image: banarasi, region: "banarasi" },
-            { name: "pochampallyIkat", image: ikat, region: "pochampally" },
-            { name: "kalamkari", image: kalamkari, region: "kalamkari" },
-          ].map((item) => (
-            <div
-              key={item.name}
-              className="category-card"
-              onClick={() => navigate(`/region/${item.region}`)}
-              style={{ cursor: "pointer" }}
-            >
-              <img src={item.image} alt={t(item.name)} />
-              <p>{t(item.name)}</p>
-            </div>
-          ))}
-        </div>
+        
+<div className="category-grid">
+  {[
+    { name: "sarees", image: handloomSarees, path: "/category/sarees" },
+    { name: "handloomBags", image: handloomBags, path: "/category/handloom_bags" },
+    { name: "homeDecor", image: homeDecor, path: "/category/home_decor" },
+    { name: "accessories", image: jewellery, path: "/category/accessories" },
+  ].map((item) => (
+    <div
+      key={item.name}
+      className="category-card"
+      onClick={() => navigate(item.path)}   // ✅ FIXED
+      style={{ cursor: "pointer" }}
+    >
+      <img src={item.image} alt={t(item.name)} />
+      <p>{t(item.name)}</p>
+    </div>
+  ))}
+</div>
+        
       </section>
 
       {/* SUPPORT */}
@@ -172,16 +175,25 @@ const Home = () => {
 
         <div className="review-grid">
           <div className="review-card">
-            <p>{t("review1")}</p>
-            <span>{t("keerthi")}</span>
-          </div>
+  <p>⭐⭐⭐⭐⭐</p>
+  <p>"{t("review1Text")}"</p>
+  <span>- Keerthi</span>
+</div>
 
           <div className="review-card">
-            <p>{t("review2")}</p>
-            <span>{t("Priya")}</span>
-          </div>
-        </div>
-      </section>
+            <p>⭐⭐⭐⭐☆</p>
+  <p>"{t("review2Text")}</p>
+  <span>- Priya</span>
+</div>
+</div>
+<div className="review-btn-container">
+    <button className="review-btn">{t("writeReview")}</button>
+  </div>
+</section>
+
+
+        
+      
     </>
   );
 };

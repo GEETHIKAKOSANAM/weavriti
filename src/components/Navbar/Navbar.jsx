@@ -10,6 +10,7 @@ import "./Navbar.css";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showCategories, setShowCategories] = useState(false);
   const { cartItems } = useContext(CartContext);
   
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ function Navbar() {
 
       {/*  NAV LINKS FIXED */}
       <div className="nav-links">
-        <Link to="/">{t("Home")}</Link>
+        <Link to="/">{t("home")}</Link>
         <Link to="/categories">{t("categories")}</Link>
         <Link to="/artisans">{t("artisans")}</Link>
         <Link to="/reviews">{t("reviews")}</Link>

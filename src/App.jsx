@@ -16,6 +16,7 @@ import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import AddressPage from "./pages/AddressPage";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/cart" element={<CartPage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
       <Route path="/address" element={<AddressPage />} />
+      <Route path="/category/:categoryName" element={<CategoryPage />} />
 
       {/* Home with Navbar + Footer */}
       <Route

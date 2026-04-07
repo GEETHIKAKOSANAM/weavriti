@@ -36,3 +36,20 @@
 .filter-option input {
   cursor: pointer;
 }
+.review-btn {
+  background-color: #b45b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;   /* 👈 small & neat */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+
+  display: block;
+  margin: 30px auto;    /* 👈 center align */
+  width: fit-content;   /* 👈 avoid stretching */
+}
+.review-btn:hover {
+  background-color: #9c4a5a;
+  transform: scale(1.05);
+}

@@ -9,7 +9,12 @@
 
 .logo {
   color: #7a1f1f;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+
 
 .nav-links a {
   margin: 0 15px;

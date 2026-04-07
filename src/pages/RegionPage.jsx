@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import { useTranslation } from "react-i18next";
@@ -23,6 +24,7 @@ import pashminaImg from "../assets/fabrics/pashmina.jpg";
 const RegionPage = () => {
   const { region } = useParams();
   const navigate = useNavigate();
+  const [showFilter, setShowFilter] = useState(false);
   const { t } = useTranslation();
 
   const southData = [

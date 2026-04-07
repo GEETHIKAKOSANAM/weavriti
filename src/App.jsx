@@ -15,6 +15,7 @@ import FabricPage from "./pages/FabricPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import AddressPage from "./pages/AddressPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/products/:fabric" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/address" element={<AddressPage />} />
 
       {/* Home with Navbar + Footer */}
       <Route

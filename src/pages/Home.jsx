@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useCart } from "../context/CartContext";
 import "./Home.css";
 
 import banarasi from "../assets/images/banarasi.jpeg";
@@ -32,6 +33,8 @@ const products = [
 const Home = () => {
   const navigate = useNavigate();
   const [showFilter, setShowFilter] = useState(false);
+  const { addToCart } = useCart();
+  
   const { t } = useTranslation();
 
   return (
@@ -99,7 +102,11 @@ const Home = () => {
       {/* SUPPORT */}
       <section className="support-section">
         <div className="support-left">
-          <h3>{t("support")}</h3>
+          <h3>{t("supportTitle")}</h3>
+         
+          <p>{t("supportDesc1")}</p>
+    <p>{t("supportDesc2")}</p>
+    <p>{t("supportDesc3")}</p>
         </div>
         <div className="support-right">
           <img src={india} alt="India Map" className="map-circle" />
@@ -108,25 +115,37 @@ const Home = () => {
 
       {/* JUST LAUNCHED */}
       <section id="launch" className="section">
-        <h2 className="section-title">{t("launch")}</h2>
+  <h2 className="section-title">{t("launch")}</h2>
 
-        <div className="product-grid">
-          {products.map((item, index) => (
-            <div key={index} className="product-card">
-              <img
-                src={item.image}
-                alt={t(item.name)}
-                className="product-img"
-              />
-              <h4>{t(item.name)}</h4>
-              <p className="price">
-                {t("from")} {item.price}
-              </p>
-              <button>{t("cart")}</button>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="product-grid">
+    {products.map((item, index) => (
+      <div key={index} className="product-card">
+        <img
+          src={item.image}
+          alt={t(item.name)}
+          className="product-img"
+        />
+        <h4>{t(item.name)}</h4>
+        <p className="price">
+          {t("from")} {item.price}
+        </p>
+        <button
+          onClick={() => {
+            addToCart({
+              name: item.name,
+              price: item.price,
+              image: item.image,
+            });
+            navigate("/cart");
+          }}
+        >
+          {t("cart")}
+        </button>
+      </div>
+    ))}
+  </div>
+</section>
+      
 
       {/* ARTISANS */}
       <section id="artisans" className="section">

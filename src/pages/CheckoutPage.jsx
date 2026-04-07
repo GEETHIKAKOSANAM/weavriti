@@ -15,26 +15,48 @@ const CheckoutPage = () => {
       <>
         <Navbar />
         <div style={{ padding: "20px" }}>
-          <h2>{t("checkout")}
-             <SpeakerButton textValue={t("checkout")} />
+          <h2>
+            {t("checkout")}
+            <SpeakerButton textValue={t("checkout")} />
           </h2>
-          <p>{t("noProductSelected")}</p>
-          <button onClick={() => navigate("/home")}>{t("goHome")}</button>
+
+          <p>
+            {t("noProductSelected")}
+            <SpeakerButton textValue={t("noProductSelected")} />
+          </p>
+
+          <button
+            onClick={() => navigate("/home")}
+            style={{
+              marginTop: "15px",
+              background: "#8b3a3a",
+              color: "white",
+              border: "none",
+              padding: "12px 18px",
+              borderRadius: "10px",
+              cursor: "pointer",
+            }}
+          >
+            {t("goHome")}
+          </button>
         </div>
       </>
     );
   }
 
   const handlePlaceOrder = () => {
-    alert(t("orderPlaced"));
-    navigate("/home");
+    navigate("/address", { state: { product } });
   };
 
   return (
     <>
       <Navbar />
+
       <div style={{ padding: "20px" }}>
-        <h2>{t("checkout")}</h2>
+        <h2>
+          {t("checkout")}
+          <SpeakerButton textValue={t("checkout")} />
+        </h2>
 
         <div
           style={{
@@ -60,16 +82,21 @@ const CheckoutPage = () => {
           />
 
           <div>
-            <h3>{t(product.name)}
-                <SpeakerButton textValue={t(product.name)} />
+            <h3>
+              {t(product.name)}
+              <SpeakerButton textValue={t(product.name)} />
             </h3>
+
             <p>
               <strong>{t("price")}:</strong> ₹{product.price}
               <SpeakerButton textValue={`${t("price")} ₹${product.price}`} />
             </p>
+
             <p>
               <strong>{t("delivery")}:</strong> {t("freeDelivery")}
-              <SpeakerButton textValue={`${t("delivery")} ${t("freeDelivery")}`} />
+              <SpeakerButton
+                textValue={`${t("delivery")} ${t("freeDelivery")}`}
+              />
             </p>
 
             <button

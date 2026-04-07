@@ -1,4 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+
+
 import { Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -7,8 +10,12 @@ import "./Navbar.css";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { cartItems } = useContext(CartContext);
+  
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  
+
 
   // Check login status on mount
   useEffect(() => {
@@ -36,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo" onClick={() => navigate("/")}>
+      <h2 className="logo" onClick={() => navigate("/home")}>
   WeaVriti
 </h2>
 
@@ -62,10 +69,28 @@ function Navbar() {
         </select>
 
         {/* 🛒 CART */}
-        <FaShoppingCart
-          className="cart-icon"
-          onClick={() => navigate("/cart")}
-        />
+        <div 
+        onClick={() => navigate("/cart")}
+          style={{ position: "relative", cursor: "pointer" }}>
+        <FaShoppingCart className="cart-icon"/>
+          {cartItems.length > 0 && (
+    <span
+      style={{
+        position: "absolute",
+        top: "-8px",
+        right: "-10px",
+        background: "red",
+        color: "white",
+        borderRadius: "50%",
+        padding: "2px 6px",
+        fontSize: "12px",
+        fontWeight: "bold",
+      }}
+    >
+      {cartItems.length}
+    </span>
+  )}
+</div>
 
         {/* 👤 PROFILE */}
         <div className="profile-container">

@@ -1,17 +1,25 @@
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "../components/Navbar/Navbar";
 import { useCart } from "../context/CartContext";
 
 const CartPage = () => {
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart } = useCart();
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const handleBuyNow = (item) => {
+    navigate("/checkout", { state: { product: item } });
+  };
 
   return (
     <>
       <Navbar />
       <div style={{ padding: "20px" }}>
-        <h2>Your Cart</h2>
+        <h2>{t("yourCart")}</h2>
 
         {cartItems.length === 0 ? (
-          <p>No items added yet</p>
+          <p>{t("emptyCart")}</p>
         ) : (
           <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
             {cartItems.map((item, index) => (
@@ -27,7 +35,7 @@ const CartPage = () => {
               >
                 <img
                   src={item.image}
-                  alt={item.name}
+                  alt={t(item.name)}
                   style={{
                     width: "100%",
                     height: "180px",
@@ -35,8 +43,46 @@ const CartPage = () => {
                     borderRadius: "10px",
                   }}
                 />
-                <h4>{item.name}</h4>
+
+                <h4>{t(item.name)}</h4>
                 <p>₹{item.price}</p>
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "10px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <button
+                    onClick={() => handleBuyNow(item)}
+                    style={{
+                      background: "#8b3a3a",
+                      color: "white",
+                      border: "none",
+                      padding: "8px 14px",
+                      borderRadius: "8px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {t("buyNow")}
+                  </button>
+
+                  <button
+                    onClick={() => removeFromCart(index)}
+                    style={{
+                      background: "#8b3a3a",
+                      color: "white",
+                      border: "none",
+                      padding: "8px 14px",
+                      borderRadius: "8px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {t("remove")}
+                  </button>
+                </div>
               </div>
             ))}
           </div>

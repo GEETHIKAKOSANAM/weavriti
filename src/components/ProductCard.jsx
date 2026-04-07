@@ -10,10 +10,21 @@ const ProductCard = ({ image, name, price }) => {
   const { addToCart } = useCart();
 
   const handleCart = () => {
-    const product = { image, name, price };
-    addToCart(product);
-    navigate("/cart");
-  };
+  const product = { image, name, price };
+  addToCart(product);
+  const message = t("addedToCart");
+  alert(t("added to cart"));
+  const utterance = new SpeechSynthesisUtterance(message);
+
+  const currentLang = i18n.language;
+
+  if (currentLang === "te") utterance.lang = "te-IN";
+  else if (currentLang === "hi") utterance.lang = "hi-IN";
+  else utterance.lang = "en-US";
+
+  window.speechSynthesis.speak(utterance);
+  navigate("/cart");
+};
 
   const handleBuyNow = () => {
   const product = { image, name, price };

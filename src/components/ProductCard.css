@@ -6,6 +6,12 @@
   text-align: center;
   transition: 0.3s;
 }
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;   /* 👈 increase this for more space */
+  margin-top: 12px;
+}
 
 .product-card:hover {
   transform: translateY(-5px);

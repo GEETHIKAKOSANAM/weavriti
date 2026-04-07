@@ -11,6 +11,14 @@ import mysoresilkImg from "../assets/fabrics/mysore_silk.jpeg";
 import ilkalImg from "../assets/fabrics/ilkal.jpg";
 import kasavuImg from "../assets/fabrics/kasavu.jpg";
 import gadwalImg from "../assets/fabrics/gadwal_silk_sarees.jpeg";
+import banarasiImg from "../assets/fabrics/banarasi.jpg";
+import bandhaniImg from "../assets/fabrics/bandhani.jpg";
+import leheriyaImg from "../assets/fabrics/leheriya.jpg";
+import chanderiImg from "../assets/fabrics/chanderi.jpg";
+import pashminaImg from "../assets/fabrics/pashmina.jpg";
+
+
+
 
 const RegionPage = () => {
   const { region } = useParams();
@@ -56,23 +64,24 @@ const RegionPage = () => {
   const northData = [
     {
       state: "uttarPradesh",
-      fabrics: [{ name: "banarasiSilk" }],
+      fabrics: [{ name: "banarasiSilk", image: banarasiImg}],
     },
     {
       state: "rajasthan",
-      fabrics: [{ name: "bandhani" }, { name: "leheriya" }],
+      fabrics: [
+        { name: "bandhani", image: bandhaniImg },
+         { name: "leheriya", image: leheriyaImg}],
     },
-    {
-      state: "punjab",
-      fabrics: [{ name: "phulkari" }],
-    },
+    
     {
       state: "madhyaPradesh",
-      fabrics: [{ name: "chanderi" }, { name: "maheshwari" }],
+      fabrics: [
+        { name: "chanderi", image: chanderiImg }, 
+       ],
     },
     {
       state: "kashmir",
-      fabrics: [{ name: "pashminaWool" }],
+      fabrics: [{ name: "pashminaWool", image: pashminaImg }],
     },
   ];
 
@@ -94,12 +103,12 @@ const RegionPage = () => {
 
             <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
               {item.fabrics.map((fabric, i) => {
-                const slug = fabric.name.toLowerCase();
+                const slug = fabric.name.replace(/([A-Z])/g, "-$1").toLowerCase();
 
                 return (
                   <div
                     key={i}
-                    onClick={() => navigate(`/fabric/${slug}`)}
+                    onClick={() => navigate(`/products/${slug}`)}
                     style={{
                       padding: "10px",
                       background: "#f5f5f5",

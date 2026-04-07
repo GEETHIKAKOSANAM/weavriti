@@ -72,3 +72,18 @@
   display: flex;
   align-items: center;
 }
+.navbar {
+  background-color: #C19A6B;  /* brown / maroon */
+  color: white;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #f5e6d3;  /* light beige */
+}
+.navbar svg {
+  color: white;
+}
+

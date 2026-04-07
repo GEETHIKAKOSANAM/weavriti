@@ -5,29 +5,31 @@ import "./Auth.css";
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     let user;
 
-    if (email === "sahasra@gmail.com") {
-      user = { email, role: "seller" };
-    } 
-    else if (email === "keerthana@gmail.com") {
-      user = { email, role: "admin" };
-    } 
-    else {
-      user = { email, role: "buyer" };
+    if (email === "sahasra@gmail.com" && password === "seller123") {
+      user = { email, role: "seller", name: "Sahasra" };
+    } else if (email === "keerthana@gmail.com" && password === "admin123") {
+      user = { email, role: "admin", name: "Keerthana" };
+    } else if (email === "marketing@weavriti.com" && password === "marketing123") {
+      user = { email, role: "marketing", name: "Marketing Team" };
+    } else {
+      user = { email, role: "buyer", name: email.split("@")[0] };
     }
 
     localStorage.setItem("user", JSON.stringify(user));
 
     if (user.role === "admin") {
       navigate("/admin");
-    } 
-    else if (user.role === "seller") {
+    } else if (user.role === "seller") {
       navigate("/seller");
-    } 
-    else {
+    } else if (user.role === "marketing") {
+      navigate("/marketing");
+    } else {
       navigate("/language");
     }
   };
@@ -37,19 +39,28 @@ function Login() {
       <div className="auth-card">
         <h2>Login</h2>
 
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-        <input type="password" placeholder="Password" />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <button onClick={handleLogin}>Login</button>
+          <button type="submit">Login</button>
+        </form>
 
         <p>
-          Don’t have an account? <Link to="/signup">Sign Up</Link>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
         </p>
       </div>
     </div>

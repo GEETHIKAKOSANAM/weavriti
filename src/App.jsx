@@ -12,8 +12,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Language from "./pages/Language";
 import RegionPage from "./pages/RegionPage";
 import FabricPage from "./pages/FabricPage";
-
-
+import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -22,7 +23,11 @@ function App() {
       <Route path="/language" element={<Language />} />
       <Route path="/region/:region" element={<RegionPage />} />
       <Route path="/fabric/:fabricName" element={<FabricPage />} />
+      <Route path="/products/:fabric" element={<ProductPage />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
 
+      {/* Home with Navbar + Footer */}
       <Route
         path="/home"
         element={
@@ -37,6 +42,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
+      {/* Protected Routes */}
       <Route
         path="/buyer"
         element={

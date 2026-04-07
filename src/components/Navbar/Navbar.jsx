@@ -25,37 +25,43 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("user");
     setIsLoggedIn(false);
-    navigate("/home");
+    navigate("/");
   };
+
   const handleLanguageChange = (e) => {
-  const selectedLang = e.target.value;
-  i18n.changeLanguage(selectedLang);
-  localStorage.setItem("lang", selectedLang);
-};
+    const selectedLang = e.target.value;
+    i18n.changeLanguage(selectedLang);
+    localStorage.setItem("lang", selectedLang);
+  };
 
   return (
     <nav className="navbar">
-      <h2 className="logo">WeaVriti</h2>
+      <h2 className="logo" onClick={() => navigate("/")}>
+  WeaVriti
+</h2>
 
+      {/*  NAV LINKS FIXED */}
       <div className="nav-links">
-        <a href="#featured">{t("categories")}</a>
-        <a href="#artisans">{t("artisans")}</a>
-        <a href="#reviews">{t("reviews")}</a>
+        <Link to="/">{t("Home")}</Link>
+        <Link to="/categories">{t("categories")}</Link>
+        <Link to="/artisans">{t("artisans")}</Link>
+        <Link to="/reviews">{t("reviews")}</Link>
       </div>
 
-      {/* RIGHT SIDE (CART + PROFILE) */}
+      {/* RIGHT SIDE */}
       <div className="nav-right">
-          <select onChange={handleLanguageChange} defaultValue={i18n.language}>
-    <option value="en">English</option>
-    <option value="te">Telugu</option>
-    <option value="hi">Hindi</option>
-    <option value="ta">Tamil</option>
-    <option value="kn">Kannada</option>
-    <option value="ml">Malayalam</option>
-  </select>
 
+        {/* 🌐 LANGUAGE */}
+        <select onChange={handleLanguageChange} value={i18n.language}>
+          <option value="en">English</option>
+          <option value="te">Telugu</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="kn">Kannada</option>
+          <option value="ml">Malayalam</option>
+        </select>
 
-        {/* 🛒 CART ICON */}
+        {/* 🛒 CART */}
         <FaShoppingCart
           className="cart-icon"
           onClick={() => navigate("/cart")}

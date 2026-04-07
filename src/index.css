@@ -51,7 +51,7 @@ button {
 
 :root {
   --primary: #b58b6b;
-  --light-bg: #f6f4f2;
+  --light-bg: #9b9895;
   --card-bg: #ffffff;
   --text-dark: #2c2c2c;
   --muted: #777;
@@ -263,3 +263,4 @@ button {
   object-fit: cover !important;
   display: block;
 }
+

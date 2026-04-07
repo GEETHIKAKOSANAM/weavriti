@@ -45,6 +45,47 @@ const resources = {
       chanderi: "Chanderi",
       maheshwari: "Maheshwari",
       pashminaWool: "Pashmina Wool",
+      products: "Products",
+      mangalagiriKurtasetFabric: "Mangalagiri Kurtaset Fabric",
+mangalagiriHandloomSaree: "Mangalagiri Handloom Saree",
+
+from: "from",
+addToCart: "Add to Cart",
+ pochampallyIkatSaree: "Pochampally Ikat Saree",
+ pochampallyFrock: "Pochampally Frock",
+ products: "Products",
+from: "from",
+addToCart: "Add to Cart",
+mangalagiriKurtasetFabric: "Mangalagiri Kurtaset Fabric",
+mangalagiriHandloomSaree: "Mangalagiri Handloom Saree",
+pochampallyIkatSaree: "Pochampally Ikat Saree",
+pochampallyFrock: "Pochampally Frock",
+"pochampally-ikat": "Pochampally Ikat",
+buyNow: "Buy Now",
+
+launch: "Just Launched",
+from: "from",
+cart: "Add to cart",
+
+goldenThreads: "Golden Threads",
+mangalagiriKurtiSet: "Mangalagiri Kurti Set",
+snowBag: "Snow Bag",
+pillowCover: "Pillow Cover",
+buyNow: "Buy Now",
+
+buyNow: "Buy Now",
+checkout: "Checkout",
+price: "Price",
+delivery: "Delivery",
+freeDelivery: "Free Delivery",
+placeOrder: "Place Order",
+orderPlaced: "Order placed successfully!",
+noProductSelected: "No product selected",
+goHome: "Go Home",
+ 
+
+
+
     },
   },
 
@@ -91,6 +132,44 @@ const resources = {
       chanderi: "చందేరి",
       maheshwari: "మహేశ్వరి",
       pashminaWool: "పష్మీనా వూల్",
+      products: "ఉత్పత్తులు",
+      mangalagiriKurtasetFabric: "మంగళగిరి కుర్తా సెట్ ఫ్యాబ్రిక్",
+mangalagiriHandloomSaree: "మంగళగిరి హ్యాండ్లూమ్ చీర",
+products: "ఉత్పత్తులు",
+from: "నుండి",
+addToCart: "కార్ట్‌లో జోడించండి",
+pochampallyIkatSaree: "పొచంపల్లి ఇకట్ చీర",
+pochampallyFrock: "పోచంపల్లి ఫ్రాక్",
+
+launch: "కొత్తగా విడుదలైనవి",
+from: "నుండి",
+cart: "కార్ట్‌లో జోడించండి",
+
+goldenThreads: "గోల్డెన్ థ్రెడ్స్",
+mangalagiriKurtiSet: "మంగళగిరి కుర్తి సెట్",
+snowBag: "స్నో బ్యాగ్",
+pillowCover: "పిల్లో కవర్",
+buyNow: "ఇప్పుడే కొనండి",
+
+buyNow: "ఇప్పుడే కొనండి",
+checkout: "చెల్లింపు",
+price: "ధర",
+delivery: "డెలివరీ",
+freeDelivery: "ఉచిత డెలివరీ",
+placeOrder: "ఆర్డర్ చేయండి",
+orderPlaced: "ఆర్డర్ విజయవంతంగా పూర్తైంది!",
+noProductSelected: "ఏ ఉత్పత్తి ఎంపిక చేయలేదు",
+goHome: "హోమ్‌కు వెళ్ళండి",
+
+
+
+
+
+
+
+
+
+
     },
   },
 
@@ -115,6 +194,10 @@ const resources = {
       karnataka: "कर्नाटक",
       kerala: "केरल",
       telangana: "तेलंगाना",
+      uttarPradesh: "उत्तर प्रदेश",
+rajasthan: "राजस्थान",
+madhyaPradesh: "मध्य प्रदेश",
+kashmir: "कश्मीर",
 
       mangalagiri: "मंगलागिरि",
       banarasiSilk: "बनारसी सिल्क",
@@ -126,6 +209,50 @@ const resources = {
       ilkalSaree: "इलकल साड़ी",
       kasavuSaree: "कसावु साड़ी",
       gadwalSaree: "गडवाल साड़ी",
+      banarasiSilk: "बनारसी सिल्क",
+bandhani: "बंधनी",
+leheriya: "लहरिया",
+phulkari: "फुलकारी",
+chanderi: "चंदेरी",
+
+pashminaWool: "पश्मीना ऊन",
+
+products: "उत्पाद",
+from: "से",
+addToCart: "कार्ट में जोड़ें",
+mangalagiriKurtasetFabric: "मंगलागिरि कुर्ता सेट फैब्रिक",
+mangalagiriHandloomSaree: "मंगलागिरि हैंडलूम साड़ी",
+products: "उत्पाद",
+from: "से",
+addToCart: "कार्ट में जोड़ें",
+mangalagiriKurtasetFabric: "मंगलागिरि कुर्ता सेट फैब्रिक",
+mangalagiriHandloomSaree: "मंगलागिरि हैंडलूम साड़ी",
+pochampallyIkatSaree: "पोचमपल्ली इकट साड़ी",
+pochampallyFrock: "पोचमपल्ली फ्रॉक",
+"pochampally-ikat": "पोचमपल्ली इकट",
+buyNow: "अभी खरीदें",
+
+launch: "अभी लॉन्च हुआ",
+from: "से",
+cart: "कार्ट में जोड़ें",
+
+goldenThreads: "गोल्डन थ्रेड्स",
+mangalagiriKurtiSet: "मंगलागिरि कुर्ती सेट",
+snowBag: "स्नो बैग",
+pillowCover: "पिलो कवर",
+buyNow: "अभी खरीदें",
+
+buyNow: "अभी खरीदें",
+checkout: "चेकआउट",
+price: "कीमत",
+delivery: "डिलीवरी",
+freeDelivery: "मुफ्त डिलीवरी",
+placeOrder: "ऑर्डर करें",
+orderPlaced: "ऑर्डर सफलतापूर्वक हो गया!",
+noProductSelected: "कोई उत्पाद चयनित नहीं है",
+goHome: "होम पर जाएँ",
+
+
     },
   },
 
@@ -143,6 +270,47 @@ const resources = {
       north: "வட இந்தியா",
       southIndiaFabrics: "தென் இந்திய துணிகள்",
       northIndiaFabrics: "வட இந்திய துணிகள்",
+      andhraPradesh: "ஆந்திரப் பிரதேசம்",
+tamilNadu: "தமிழ்நாடு",
+karnataka: "கர்நாடகா",
+kerala: "கேரளா",
+telangana: "தெலங்கானா",
+uttarPradesh: "உத்தரப் பிரதேசம்",
+rajasthan: "ராஜஸ்தான்",
+punjab: "பஞ்சாப்",
+madhyaPradesh: "மத்தியப் பிரதேசம்",
+kashmir: "காஷ்மீர்",
+
+mangalagiri: "மங்களகிரி",
+pochampallyIkat: "போச்சம்பள்ளி இக்கட்",
+kalamkari: "கலம்காரி",
+kanchipuramSilk: "காஞ்சிபுரம் சில்க்",
+chettinadCotton: "செட்டிநாடு காட்டன்",
+mysoreSilk: "மைசூர் சில்க்",
+ilkalSaree: "இல்கல் சேலை",
+kasavuSaree: "கசாவு சேலை",
+gadwalSaree: "கட்வால் சேலை",
+banarasiSilk: "பனாரசி சில்க்",
+
+bandhani: "பந்தனி",
+leheriya: "லெஹேரியா",
+phulkari: "புல்காரி",
+chanderi: "சந்தேரி",
+maheshwari: "மகேஷ்வரி",
+pashminaWool: "பஷ்மினா ஊல்",
+
+launch: "புதிய வரவுகள்",
+from: "முதல்",
+cart: "வண்டியில் சேர்",
+
+goldenThreads: "கோல்டன் த்ரெட்ஸ்",
+mangalagiriKurtiSet: "மங்களகிரி குர்த்தி செட்",
+snowBag: "ஸ்னோ பை",
+pillowCover: "தலையணை உறை",
+buyNow: "இப்போது வாங்குங்கள்",
+
+
+      
     },
   },
 
@@ -160,6 +328,45 @@ const resources = {
       north: "ಉತ್ತರ ಭಾರತ",
       southIndiaFabrics: "ದಕ್ಷಿಣ ಭಾರತದ ವಸ್ತ್ರಗಳು",
       northIndiaFabrics: "ಉತ್ತರ ಭಾರತದ ವಸ್ತ್ರಗಳು",
+      andhraPradesh: "ಆಂಧ್ರ ಪ್ರದೇಶ",
+tamilNadu: "ತಮಿಳುನಾಡು",
+karnataka: "ಕರ್ನಾಟಕ",
+kerala: "ಕೇರಳ",
+telangana: "ತೆಲಂಗಾಣ",
+uttarPradesh: "ಉತ್ತರ ಪ್ರದೇಶ",
+rajasthan: "ರಾಜಸ್ಥಾನ",
+punjab: "ಪಂಜಾಬ್",
+madhyaPradesh: "ಮಧ್ಯ ಪ್ರದೇಶ",
+kashmir: "ಕಾಶ್ಮೀರ",
+
+mangalagiri: "ಮಂಗಳಗಿರಿ",
+pochampallyIkat: "ಪೋಚಂಪಳ್ಳಿ ಇಕಟ್",
+kalamkari: "ಕಲಂಕಾರಿ",
+kanchipuramSilk: "ಕಾಂಚೀಪುರಂ ಸಿಲ್ಕ್",
+chettinadCotton: "ಚೆಟ್ಟಿನಾಡು ಕಾಟನ್",
+mysoreSilk: "ಮೈಸೂರು ಸಿಲ್ಕ್",
+ilkalSaree: "ಇಲ್ಕಲ್ ಸೀರೆ",
+kasavuSaree: "ಕಸಾವು ಸೀರೆ",
+gadwalSaree: "ಗದ್ವಾಲ್ ಸೀರೆ",
+banarasiSilk: "ಬನಾರಸಿ ಸಿಲ್ಕ್",
+
+bandhani: "ಬಂಧನಿ",
+leheriya: "ಲೆಹೇರಿಯಾ",
+phulkari: "ಫುಲ್ಕಾರಿ",
+chanderi: "ಚಂದೇರಿ",
+maheshwari: "ಮಹೇಶ್ವರಿ",
+pashminaWool: "ಪಶ್ಮೀನಾ ವೂಲ್",
+
+launch: "ಹೊಸ ಆಗಮನಗಳು",
+from: "ಇಂದ",
+cart: "ಕಾರ್ಟ್‌ಗೆ ಸೇರಿಸಿ",
+
+goldenThreads: "ಗೋಲ್ಡನ್ ಥ್ರೆಡ್ಸ್",
+mangalagiriKurtiSet: "ಮಂಗಳಗಿರಿ ಕುರ್ಥಿ ಸೆಟ್",
+snowBag: "ಸ್ನೋ ಬ್ಯಾಗ್",
+pillowCover: "ಪಿಲ್ಲೋ ಕವರ್",
+buyNow: "ಈಗ ಖರೀದಿಸಿ",
+      
     },
   },
 
@@ -175,6 +382,45 @@ const resources = {
       filter: "ഫിൽട്ടർ",
       south: "ദക്ഷിണ ഇന്ത്യ",
       north: "വടക്കേ ഇന്ത്യ",
+      andhraPradesh: "ആന്ധ്ര പ്രദേശ്",
+tamilNadu: "തമിഴ്നാട്",
+karnataka: "കർണാടക",
+kerala: "കേരളം",
+telangana: "തെലങ്കാന",
+uttarPradesh: "ഉത്തര പ്രദേശ്",
+rajasthan: "രാജസ്ഥാൻ",
+punjab: "പഞ്ചാബ്",
+madhyaPradesh: "മധ്യ പ്രദേശ്",
+kashmir: "കാശ്മീർ",
+
+mangalagiri: "മംഗളഗിരി",
+pochampallyIkat: "പൊച്ചമ്പള്ളി ഇക്കറ്റ്",
+kalamkari: "കലങ്കാരി",
+kanchipuramSilk: "കാഞ്ചിപുരം സിൽക്ക്",
+chettinadCotton: "ചെട്ടിനാട് കോട്ടൺ",
+mysoreSilk: "മൈസൂർ സിൽക്ക്",
+ilkalSaree: "ഇൽകൽ സാരി",
+kasavuSaree: "കസാവ് സാരി",
+gadwalSaree: "ഗദ്വാൽ സാരി",
+banarasiSilk: "ബനാരസി സിൽക്ക്",
+
+bandhani: "ബന്ധനി",
+leheriya: "ലേഹേറിയ",
+phulkari: "ഫുൽക്കാരി",
+chanderi: "ചന്ദേരി",
+maheshwari: "മഹേശ്വരി",
+pashminaWool: "പഷ്മീന വൂൾ",
+
+launch: "പുതിയ വരവുകൾ",
+from: "മുതൽ",
+cart: "കാർട്ടിൽ ചേർക്കുക",
+
+goldenThreads: "ഗോൾഡൻ ത്രെഡ്സ്",
+mangalagiriKurtiSet: "മംഗളഗിരി കുര്തി സെറ്റ്",
+snowBag: "സ്നോ ബാഗ്",
+pillowCover: "പില്ലോ കവർ",
+buyNow: "ഇപ്പോൾ വാങ്ങുക",
+      
     },
   },
 
@@ -238,6 +484,7 @@ const resources = {
     },
   },
 };
+
 
 i18n.use(initReactI18next).init({
   resources,

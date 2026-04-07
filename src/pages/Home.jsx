@@ -8,6 +8,7 @@ import cotton from "../assets/images/cotton.jpeg";
 import ikat from "../assets/images/ikat.jpeg";
 import kalamkari from "../assets/images/kalamkari.jpeg";
 
+
 import goldenthreads from "../assets/images/goldenthreads.webp";
 import mangalagirikurti from "../assets/images/mangalagirikurti.jpg";
 import snowbag from "../assets/images/snowbag.jpg";
@@ -19,12 +20,13 @@ import artist3 from "../assets/images/artist3.jpg";
 
 import india from "../assets/images/india.jpg";
 
+
 /* PRODUCTS DATA */
 const products = [
-  { name: "Golden Threads", price: "₹3099", image: goldenthreads },
-  { name: "Mangalagiri kurti set", price: "₹1899", image: mangalagirikurti },
-  { name: "Snow bag", price: "₹456", image: snowbag },
-  { name: "Pillow cover", price: "₹290", image: pillowcover },
+  { name: "goldenThreads", price: "₹3099", image: goldenthreads },
+  { name: "mangalagiriKurtiSet", price: "₹1899", image: mangalagirikurti },
+  { name: "snowBag", price: "₹456", image: snowbag },
+  { name: "pillowCover", price: "₹290", image: pillowcover },
 ];
 
 const Home = () => {
@@ -111,8 +113,12 @@ const Home = () => {
         <div className="product-grid">
           {products.map((item, index) => (
             <div key={index} className="product-card">
-              <img src={item.image} alt={item.name} className="product-img" />
-              <h4>{item.name}</h4>
+              <img
+                src={item.image}
+                alt={t(item.name)}
+                className="product-img"
+              />
+              <h4>{t(item.name)}</h4>
               <p className="price">
                 {t("from")} {item.price}
               </p>
@@ -148,12 +154,12 @@ const Home = () => {
         <div className="review-grid">
           <div className="review-card">
             <p>{t("review1")}</p>
-            <span>{t("review1by")}</span>
+            <span>{t("keerthi")}</span>
           </div>
 
           <div className="review-card">
             <p>{t("review2")}</p>
-            <span>{t("review2by")}</span>
+            <span>{t("Priya")}</span>
           </div>
         </div>
       </section>

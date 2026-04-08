@@ -7,32 +7,33 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    let user;
+  const handleLogin = async (e) => {
+  e.preventDefault();
 
-    if (email === "sahasra@gmail.com" && password === "seller123") {
-      user = { email, role: "seller", name: "Sahasra" };
-    } else if (email === "keerthana@gmail.com" && password === "admin123") {
-      user = { email, role: "admin", name: "Keerthana" };
-    } else if (email === "marketing@weavriti.com" && password === "marketing123") {
-      user = { email, role: "marketing", name: "Marketing Team" };
-    } else {
-      user = { email, role: "buyer", name: email.split("@")[0] };
-    }
+  const res = await fetch("http://localhost:8080/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email,
+      password
+    })
+  });
 
-    localStorage.setItem("user", JSON.stringify(user));
+  const data = await res.json();
 
-    if (user.role === "admin") {
-      navigate("/admin");
-    } else if (user.role === "seller") {
-      navigate("/seller");
-    } else if (user.role === "marketing") {
-      navigate("/marketing");
-    } else {
-      navigate("/language");
-    }
-  };
+  if (data.user) {
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    // ✅ Direct navigation (no popup)
+    navigate("/home");
+  } else {
+    alert("Invalid credentials"); // keep only for error
+  }
+};
+
+
 
   return (
     <div className="auth-container">

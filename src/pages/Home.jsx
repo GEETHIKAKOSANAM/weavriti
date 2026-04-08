@@ -1,3 +1,4 @@
+import { FaVolumeUp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -36,45 +37,78 @@ const Home = () => {
   const [showFilter, setShowFilter] = useState(false);
   const { addToCart } = useCart();
   
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const speakText = (text) => {
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = i18n.language;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(speech);
+};
 
   return (
     <>
       {/* REGION BASED SECTION */}
       <section className="featured" id="featured">
-        <h2>{t("shopByCategory")}</h2>
+        <h2>
+  {t("shopByCategory")}
+  <FaVolumeUp
+    style={{ marginLeft: "10px", cursor: "pointer" }}
+    onClick={() => speakText(t("shopByCategory"))}
+  />
+</h2>
 
         {/* FILTER BUTTON */}
         <div className="top-filter">
           <button onClick={() => setShowFilter(!showFilter)}>
-            {t("filter")} ▾
-          </button>
+  {t("filter")} ▾
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "14px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(t("filter"));
+    }}
+  />
+</button>
 
           {showFilter && (
             <div className="filter-dropdown">
               <label className="filter-option">
-                <input
-                  type="radio"
-                  name="region"
-                  onChange={() => {
-                    navigate("/region/south");
-                    setShowFilter(false);
-                  }}
-                />
-                {t("south")}
-              </label>
+  <input
+    type="radio"
+    name="region"
+    onChange={() => {
+      navigate("/region/south");
+      setShowFilter(false);
+    }}
+  />
+  {t("south")}
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "13px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(t("south"));
+    }}
+  />
+</label>
 
-              <label className="filter-option">
-                <input
-                  type="radio"
-                  name="region"
-                  onChange={() => {
-                    navigate("/region/north");
-                    setShowFilter(false);
-                  }}
-                />
-                {t("north")}
-              </label>
+             <label className="filter-option">
+  <input
+    type="radio"
+    name="region"
+    onChange={() => {
+      navigate("/region/north");
+      setShowFilter(false);
+    }}
+  />
+  {t("north")}
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "13px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(t("north"));
+    }}
+  />
+</label>
             </div>
           )}
         </div>
@@ -95,7 +129,16 @@ const Home = () => {
       style={{ cursor: "pointer" }}
     >
       <img src={item.image} alt={t(item.name)} />
-      <p>{t(item.name)}</p>
+      <p>
+  {t(item.name)}
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "14px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(t(item.name));
+    }}
+  />
+</p>
     </div>
   ))}
 </div>
@@ -105,7 +148,22 @@ const Home = () => {
       {/* SUPPORT */}
       <section className="support-section">
         <div className="support-left">
-          <h3>{t("supportTitle")}</h3>
+          <h3>
+  {t("supportTitle")}
+  <span
+    style={{ marginLeft: "10px", cursor: "pointer" }}
+    onClick={() =>
+      speakText(
+        t("supportTitle") + ". " +
+        t("supportDesc1") + ". " +
+        t("supportDesc2") + ". " +
+        t("supportDesc3")
+      )
+    }
+  >
+    🔊
+  </span>
+</h3>
          
           <p>{t("supportDesc1")}</p>
     <p>{t("supportDesc2")}</p>
@@ -118,7 +176,13 @@ const Home = () => {
 
       {/* JUST LAUNCHED */}
       <section id="launch" className="section">
-  <h2 className="section-title">{t("launch")}</h2>
+  <h2 className="section-title">
+  {t("launch")}
+  <FaVolumeUp
+    style={{ marginLeft: "10px", cursor: "pointer" }}
+    onClick={() => speakText(t("launch"))}
+  />
+</h2>
 
   <div className="product-grid">
     {products.map((item, index) => (
@@ -128,10 +192,26 @@ const Home = () => {
           alt={t(item.name)}
           className="product-img"
         />
-        <h4>{t(item.name)}</h4>
+        <h4>
+  {t(item.name)}
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "14px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(t(item.name));
+    }}
+  />
+</h4>
         <p className="price">
-          {t("from")} {item.price}
-        </p>
+  {t("from")} {item.price}
+  <FaVolumeUp
+    style={{ marginLeft: "8px", cursor: "pointer", fontSize: "13px" }}
+    onClick={(e) => {
+      e.stopPropagation();
+      speakText(`${t(item.name)}. ${t("from")} ${item.price}`);
+    }}
+  />
+</p>
         <button
           onClick={() => {
             addToCart({

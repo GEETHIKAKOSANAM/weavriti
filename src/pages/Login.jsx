@@ -8,32 +8,35 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const res = await fetch("http://localhost:8080/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      email,
-      password
-    })
-  });
+    try {
+      const res = await fetch("http://localhost:8080/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email,
+          password
+        })
+      });
 
-  const data = await res.json();
+      const data = await res.json();
+      console.log("Login response:", data);
 
-  if (data.user) {
-    localStorage.setItem("user", JSON.stringify(data.user));
-
-    // ✅ Direct navigation (no popup)
-    navigate("/home");
-  } else {
-    alert("Invalid credentials"); // keep only for error
-  }
-};
-
-
+      // backend user object direct ga pampithe
+      if (res.ok && data) {
+        localStorage.setItem("user", JSON.stringify(data));
+        navigate("/home");
+      } else {
+        alert("Invalid credentials");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Something went wrong");
+    }
+  };
 
   return (
     <div className="auth-container">

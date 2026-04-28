@@ -9,7 +9,7 @@ import BuyerPage from "./pages/BuyerPage";
 import SellerPage from "./pages/SellerPage";
 import AdminPage from "./pages/AdminPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Language from "./pages/Language";
+import Language from "./pages/language";
 import RegionPage from "./pages/RegionPage";
 import FabricPage from "./pages/FabricPage";
 import ProductPage from "./pages/ProductPage";

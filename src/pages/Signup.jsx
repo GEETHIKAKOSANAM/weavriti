@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSignup = async () => {
     try {
-      const res = await fetch("http://localhost:8080/signup", {
+       fetch(`${import.meta.env.VITE_API_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
